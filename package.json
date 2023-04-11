@@ -1,10 +1,14 @@
 {
   "name": "chromebookremap",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "main": "dist-electron/main/index.js",
   "description": "Really simple Electron + Vue + Vite boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
-  "license": "MIT",
+  "author": "coolstar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/coolstar/chromebookmap/issues"
+  },
+  "homepage": "https://github.com/coolstar/chromebookmap#readme",
   "private": true,
   "keywords": [
     "electron",
