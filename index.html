@@ -1,125 +1,14 @@
-<html>
-	<head>
-		<title>Keyboard Mapper</title>
-		<style type="text/css">
-			.sidebar {
-				width: 30%;
-				height: 100%;
-				float: left;
-				background-color: green;
-			}
-			.mainmap {
-				width: 70%;
-				height: 100%;
-				float: right;
-				background-color: cyan;
-			}
-
-			.keyboard-row {
-				clear: both;
-			}
-			.keyboard-key {
-				width: 40px;
-				height: 40px;
-				vertical-align: middle;
-				float: left;
-				line-height: 40px;
-				font-size: 20px;
-				background-color: #333333;
-				margin: 2px;
-				border-radius: 4px;
-			}
-			.keyboard-key-short {
-				height: 30px;
-				width: 40.4px;
-				margin: 1px;
-				line-height: 30px;
-			}
-			.keyboard-legend {
-				width: 40px;
-				text-align: center;
-				color: white;
-			}
-			.key-11col {
-				width: 46px;
-			}
-			.key-14col {
-				width: 50px;
-			}
-			.key-15col {
-				width: 62px;
-			}
-			.key-16col {
-				width: 82px;
-			}
-			.key-20col {
-				width: 84px;
-			}
-			.key-21col {
-				width: 104px;
-			}
-			.key-space {
-				width: 216px;
-			}
-		</style>
-		<script type="text/javascript">
-			var crosKeyboard = {
-				"keyclasses": {
-					"lshift": "key-20col",
-					"lctrl": "key-20col",
-					"lalt": "key-20col",
-					"space": "key-space",
-					"left": "key-11col",
-					"updn": "key-11col",
-					"right": "key-11col",
-					"rshift": "key-21col",
-					"super": "key-16col",
-					"enter": "key-15col",
-					"tab": "key-14col",
-					"\\": "key-14col",
-					"backspace": "key-15col"
-				},
-				"keys": [
-					["esc", "back", "fwd", "refresh", "fs", "ovv", "snap", "brdn", "brup", "priv", "kbdn", "kbup", "plps", "mut", "volup", "voldn", "nxttr", "prvtr", "micmut", "lock"],
-					["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "+", "backspace"],
-					["tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"],
-					["super", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "enter"],
-					["lshift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "rshift"],
-					["lctrl", "lalt", "space", "ralt", "rctrl", "left", "updn", "right"]
-				]
-			};
-
-			window.onload = function(){
-				crosKeyboard.keys.forEach((row, idx) => {
-					var rowElem = document.createElement("div");
-					rowElem.classList.add("keyboard-row");
-					row.forEach((key) => {
-						var keyElem = document.createElement("div");
-						keyElem.classList.add("keyboard-key");
-						if (idx == 0){
-							keyElem.classList.add("keyboard-key-short");
-						}
-						var additionalClass = crosKeyboard.keyclasses[key];
-						if (additionalClass){
-							keyElem.classList.add(additionalClass);
-						}
-						var keyLegend = document.createElement("div");
-							keyLegend.classList.add("keyboard-legend");
-							keyLegend.innerHTML = key;
-						keyElem.appendChild(keyLegend);
-						rowElem.appendChild(keyElem);
-					});
-					document.getElementById("keyboard").appendChild(rowElem);
-				});
-			};
-		</script>
-	</head>
-	<body>
-		<div class="sidebar">
-		</div>
-		<div class="mainmap">
-			<div class="keyboard" id="keyboard">
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Electron + Vite + Vue</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

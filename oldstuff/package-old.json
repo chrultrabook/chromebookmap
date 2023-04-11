@@ -1,0 +1,22 @@
+{
+  "name": "chromebookmap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolstar/chromebookmap.git"
+  },
+  "author": "coolstar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/coolstar/chromebookmap/issues"
+  },
+  "homepage": "https://github.com/coolstar/chromebookmap#readme",
+  "devDependencies": {
+    "electron": "^24.0.0"
+  }
+}
